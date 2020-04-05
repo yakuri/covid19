@@ -4,7 +4,7 @@ $.ajax({
   dataType:"json",
   timespan:1000
   }).done(function(data1,textStatus,jqXHR) {
-    $("#output").append("<tr><th>県名</th><th>感染数</th><th>死者数</th><th>感染数における死者数の割合</th></tr>");
+    $("#output").append("<tr><th>都道府県名</th><th>感染数</th><th>死者数</th><th>感染数における死者数の割合</th></tr>");
     var totalcases = 0;
     var totaldeaths = 0;
     for(var i in data1){
