@@ -1,3 +1,9 @@
+body {
+  background: #eeeeee;
+  font-size: 15px;
+  font-family: "YuGothic","Yu Gothic","Meiryo","ヒラギノ角ゴ","sans-serif";
+}
+
 table{
   width: 100%;
   border-collapse:separate;
