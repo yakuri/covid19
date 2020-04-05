@@ -1,7 +1,7 @@
 # covid19
 
 - 新型コロナウィルスの感染数・死者数を都道府県ごとに一覧で表示します。
-- COVID-19 Japan Web API (https://github.com/ryo-ma/covid19-japan-web-api) から取得した感染数、死者数のデータを表示しています。
+- COVID-19 Japan Web API (https://github.com/ryo-ma/covid19-japan-web-api) から取得した感染数・死者数のデータを表示しています。
 
 # DEMO
 
