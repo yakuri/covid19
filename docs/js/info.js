@@ -1,3 +1,28 @@
+var chartDataKansen = {};
+chartDataKansen.type = 'horizontalBar';
+chartDataKansen.data = {
+  labels: [{}],
+  datasets: [
+    {
+      label: '感染数',
+      data: [{}],
+      backgroundColor: "rgba(219,39,91,0.5)"
+    },
+  ]
+};
+chartDataKansen.options = {
+  title: {
+    display: true,
+    text: '都道府県別 感染数'
+  },
+  scales: {
+    xAxes: [{
+        ticks: {
+        }
+    }]
+  },
+};
+
 $.ajax({
   url:"https://covid19-japan-web-api.now.sh/api/v1/prefectures",
   type:"GET",
@@ -20,12 +45,21 @@ $.ajax({
           + "%</td></tr>");
           totalcases = totalcases + data1[i].cases;
           totaldeaths = totaldeaths + data1[i].deaths;
+
+          // グラフ表示用
+          chartDataKansen.data.labels[i] = data1[i].name_ja;
+          chartDataKansen.data.datasets[0].data[i] = data1[i].cases;
     }
     $("#output").append("<tr><td>計</td><td>" + totalcases
       + "名</td><td>" + totaldeaths
       + "名</td><td>" + Math.round(totaldeaths * 1000 / totalcases) / 10
       + "%</td></tr>");
     var data2 = JSON.stringify(data1);
+
+    // グラフ表示用
+    var ctx = document.getElementById('chart');
+    var chart = new Chart(ctx, chartDataKansen);
+
     console.log(data2);
   }).fail(function(jqXHR, textStatus, errorThrown ) {
     console.log(jqXHR.status);

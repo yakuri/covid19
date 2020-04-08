@@ -52,3 +52,10 @@ table tr:last-child td:first-child {
 table tr:last-child td:last-child {
   border-radius: 0 0 5px 0;
 }
+
+@media screen and (min-width: 1000px) {
+  .chart_container {
+    width: 840px;
+    margin: auto;
+  }
+}
