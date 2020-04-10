@@ -1,6 +1,6 @@
-var chartDataKansen = {};
-chartDataKansen.type = 'horizontalBar';
-chartDataKansen.data = {
+var chartData = {};
+chartData.type = 'horizontalBar';
+chartData.data = {
   labels: [{}],
   datasets: [
     {
@@ -10,7 +10,7 @@ chartDataKansen.data = {
     },
   ]
 };
-chartDataKansen.options = {
+chartData.options = {
   title: {
     display: true,
     text: '都道府県別 感染数'
@@ -47,8 +47,8 @@ $.ajax({
           totaldeaths = totaldeaths + data1[i].deaths;
 
           // グラフ表示用
-          chartDataKansen.data.labels[i] = data1[i].name_ja;
-          chartDataKansen.data.datasets[0].data[i] = data1[i].cases;
+          chartData.data.labels[i] = data1[i].name_ja;
+          chartData.data.datasets[0].data[i] = data1[i].cases;
     }
     $("#output").append("<tr><td>計</td><td>" + totalcases
       + "名</td><td>" + totaldeaths
@@ -58,7 +58,7 @@ $.ajax({
 
     // グラフ表示用
     var ctx = document.getElementById('chart');
-    var chart = new Chart(ctx, chartDataKansen);
+    var chart = new Chart(ctx, chartData);
 
     console.log(data2);
   }).fail(function(jqXHR, textStatus, errorThrown ) {
