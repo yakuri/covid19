@@ -1,6 +1,6 @@
 body {
   color: #555;
-  background: #eeeeee;
+  background: #ffeeff;
   font-size: 15px;
   font-family: "YuGothic","Yu Gothic","Meiryo","ヒラギノ角ゴ","sans-serif";
 }
@@ -24,7 +24,7 @@ table th:last-child{
 table th{
   text-align: center;
   color:white;
-  background: linear-gradient(#447788,#6699aa);
+  background: linear-gradient(#32273d,#32273d);
   border-left: 1px solid #3c6690;
   border-top: 1px solid #3c6690;
   border-bottom: 1px solid #3c6690;
@@ -55,9 +55,9 @@ table tr:last-child td:last-child {
   border-radius: 0 0 5px 0;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 200px) {
   .chart_container {
-    width: 840px;
-    margin: auto;
+    width: 500px;
+    //margin: auto;
   }
 }
