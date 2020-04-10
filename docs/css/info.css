@@ -1,7 +1,7 @@
 body {
   color: #555;
   background: #ffeeff;
-  font-size: 15px;
+  font-size: 18px;
   font-family: "YuGothic","Yu Gothic","Meiryo","ヒラギノ角ゴ","sans-serif";
 }
 
@@ -9,7 +9,7 @@ table{
   width: 100%;
   border-collapse:separate;
   border-spacing: 0;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 table th:first-child{
