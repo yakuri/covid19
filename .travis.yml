@@ -6,10 +6,13 @@ jobs:
         - chmod 600 ~/.ssh/id_rsa
         - git config --global user.email "yasutakekurita@gmail.com"
         - git config --global user.name "yakuri"
-        - git clone --depth=50 --branch=master git@github.com:yakuri/covid19.git
+        - git clone --depth=5 --branch=master git@github.com:yakuri/covid19.git
         - cd covid19
-        - curl https://covid19-japan-web-api.now.sh/api/v1/prefectures > data/prefectures_`date +"%Y%m%d"`.json
+        - DATE=`env TZ=JST-9 date +"%Y%m%d"`
+        - DATETIME=`env TZ=JST-9 date +"%Y%m%dT%H%M%S+0900"`
+        - echo "{""date"" : ""${DATETIME}"", ""data"" :" > data/prefectures_$DATE.json
+        - curl https://covid19-japan-web-api.now.sh/api/v1/prefectures >> data/prefectures_$DATE.json
+        - echo } >> data/prefectures_$DATE.json
         - git add --all
         - git commit -m "by Travis CI (JOB $TRAVIS_JOB_NUMBER)"
         - git push origin master
-        - env TZ=JST-9 date
