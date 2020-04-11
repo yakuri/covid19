@@ -1,9 +1,6 @@
 jobs:
   include:
-    - stage: 'Test'
+    - stage: 'Commit Today Json'
       script:
-        - echo test
-    - stage: 'Update Check'
-      if: type = cron
-      script:
-        - echo test
+        - curl https://covid19-japan-web-api.now.sh/api/v1/prefectures > prefectures_`date +"%Y%m%d`.json
+        - cat prefectures_`date +"%Y%m%d`.json
