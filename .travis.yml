@@ -11,4 +11,4 @@ jobs:
         - curl https://covid19-japan-web-api.now.sh/api/v1/prefectures > data/prefectures_`date +"%Y%m%d"`.json
         - git add --all
         - git commit -m "by Travis CI (JOB $TRAVIS_JOB_NUMBER)"
-        - git push https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git ${TRAVIS_BRANCH}
+        - git push origin master
