@@ -2,5 +2,5 @@ jobs:
   include:
     - stage: 'Commit Today Json'
       script:
-        - curl https://covid19-japan-web-api.now.sh/api/v1/prefectures > data/prefectures_`date +"%Y%m%d`.json
-        - cat data/prefectures_`date +"%Y%m%d`.json
+        - curl https://covid19-japan-web-api.now.sh/api/v1/prefectures > data/prefectures_`date +"%Y%m%d"`.json
+        - cat data/prefectures_`date +"%Y%m%d"`.json
