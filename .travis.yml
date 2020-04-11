@@ -1,0 +1,9 @@
+jobs:
+  include:
+    - stage: 'Test'
+      script:
+        - go test -v .
+    - stage: 'Update Check'
+      if: type = cron
+      script:
+        - echo test
