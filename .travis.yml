@@ -12,5 +12,4 @@ jobs:
         - git add --all
         - git commit -m "by Travis CI (JOB $TRAVIS_JOB_NUMBER)"
         - git push origin master
-        - date
-        - TZ=-9 date
+        - env TZ=JST-9 date
