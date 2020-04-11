@@ -10,7 +10,6 @@ jobs:
         - cd covid19
         - DATE=`env TZ=JST-9 date +"%Y%m%d"`
         - DATETIME=`env TZ=JST-9 date +"%Y%m%dT%H%M%S+0900"`
-        - echo "{""date"" : ""${DATETIME}"", ""data"" :" > data/prefectures_$DATE.json
         - curl https://covid19-japan-web-api.now.sh/api/v1/prefectures >> data/prefectures_$DATE.json
         - echo } >> data/prefectures_$DATE.json
         - git add --all
