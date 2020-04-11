@@ -12,7 +12,7 @@ jobs:
         - DATETIME=`env TZ=JST-9 date +"%Y%m%dT%H%M%S+0900"`
         - COLON=":"
         - echo test
-        - echo "{""date"" ${COLON} ""${DATETIME}"", ""data"" ${COLON}"" > data/prefectures_$DATE.json
+        - echo "{""date"" ${COLON} ""${DATETIME}"", ""data"" ${COLON}" > data/prefectures_$DATE.json
         - curl https://covid19-japan-web-api.now.sh/api/v1/prefectures >> data/prefectures_$DATE.json
         - echo } >> data/prefectures_$DATE.json
         - git add --all
