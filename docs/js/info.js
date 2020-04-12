@@ -73,13 +73,6 @@ $(function(){
     }).done(function(data,textStatus,jqXHR) {
       // 感染数(現在)
       dataKansenShisha = data;
-      for(var i in data){
-        // 死者数の割合(現在)
-        dataKansenShisha[i].percent = 0;
-        if(dataKansenShisha[i].cases != 0) {
-          dataKansenShisha[i].percent = Math.round(dataKansenShisha[i].deaths * 1000 / dataKansenShisha[i].cases) / 10;
-        }
-      }
       // console.log(JSON.stringify(data));
     }).fail(function(jqXHR, textStatus, errorThrown ) {
       console.log(jqXHR.status);
@@ -90,8 +83,9 @@ $(function(){
   });
 
   // 前日のデータを取得
+  var yesterDayStr = getYesterDayDateStr();
   $.ajax({
-    url:"https://yakuri.github.io/covid19/data/prefectures_20200411.json",
+    url:"https://yakuri.github.io/covid19/data/prefectures_" + yesterDayStr + ".json",
     type:"GET",
     dataType:"json",
     timespan:1000,
@@ -106,12 +100,6 @@ $(function(){
         dataKansenShisha[i].deathsYesterDay = data.data[i].deaths;
         // 死者数(前日比)
         dataKansenShisha[i].deathsDiff = dataKansenShisha[i].deaths - dataKansenShisha[i].deathsYesterDay;
-        // 死者数の割合(前日)
-        dataKansenShisha[i].percentYesterDay = 0;
-        if(dataKansenShisha[i].casesYesterDay != 0) {
-          // 小数点以下の桁数1桁で設定
-          dataKansenShisha[i].percentYesterDay = Math.round(dataKansenShisha[i].deathsYesterDay * 1000 / dataKansenShisha[i].casesYesterDay) / 10;
-        }
       }
       // console.log(JSON.stringify(data));
     }).fail(function(jqXHR, textStatus, errorThrown ) {
@@ -148,7 +136,6 @@ $(function(){
 
 // 一覧を表示
 function displayList(dataKansenShisha) {
-  $("#output").append("<tr><th>都道府県名</th><th>感染数(前日比)</th><th>死者数(前日比)</th><th>死者数の割合(前日比)</th></tr>");
   // 感染数(現在)の合計
   var totalCases = 0;
   // 感染数(前日)の合計
@@ -158,15 +145,17 @@ function displayList(dataKansenShisha) {
   // 死者数(前日)の合計
   var totalDeathsYesterDay = 0;
 
+  // ヘッダを出力
+  $("#output").append("<tr><th>都道府県名</th><th>感染数(前日比)</th><th>死者数(前日比)</th><th>死者数の割合(前日比)</th></tr>");
+
   // 感染数（死者数含む）の一覧表示
   for(var i in dataKansenShisha){
-    // 前日からの死者数の割合の増加
-    var percentDiff = dataKansenShisha[i].percent - dataKansenShisha[i].percentYesterDay;
-    // 小数点以下の桁数1桁で設定
-    percentDiff = Math.round(percentDiff * 10) / 10;
-    if(percentDiff > 0) {
-      percentDiff = "+" + percentDiff;
-    }
+    // 死者数の割合(現在)
+    var percent = getPercent(dataKansenShisha[i].cases, dataKansenShisha[i].deaths);
+    // 死者数の割合(前日)
+    var percentYesterDay = getPercent(dataKansenShisha[i].casesYesterDay, dataKansenShisha[i].deathsYesterDay);
+    // 死者数の割合(前日比)
+    var percentDiff = getDiffDecimalValue(percent, percentYesterDay);
 
     // 都道府県毎のデータの行を出力
     $("#output").append("<tr><td>"
@@ -178,7 +167,7 @@ function displayList(dataKansenShisha) {
       + dataKansenShisha[i].deaths + "名"
       + "(" + getDiffIntValue(dataKansenShisha[i].deaths, dataKansenShisha[i].deathsYesterDay) + ")"
         + "</td><td>"
-        + dataKansenShisha[i].percent + "%"
+        + percent + "%"
         + "(" + percentDiff + ")"
         + "</td></tr>");
 
@@ -188,6 +177,10 @@ function displayList(dataKansenShisha) {
       totalDeathsYesterDay = totalDeathsYesterDay + dataKansenShisha[i].deathsYesterDay;
   }
 
+  // 死者数の割合(合計,現在)
+  var percentTotal = getPercent(totalCases, totalDeaths);
+  // 死者数の割合(合計,前日)
+  var percentTotalYesterDay = getPercent(totalCasesYesterDay, totalDeathsYesterDay);
   // 合計のデータの行を出力
   $("#output").append("<tr><td>計</td><td>" + totalCases
     + "名"
@@ -195,8 +188,10 @@ function displayList(dataKansenShisha) {
     + "</td><td>" + totalDeaths
     + "名"
     + "(" + getDiffIntValue(totalDeaths, totalDeathsYesterDay) + ")"
-    + "</td><td>" + Math.round(totalDeaths * 1000 / totalCases) / 10
-    + "%</td></tr>");
+    + "</td><td>" + percentTotal
+    + "%"
+    + "(" + getDiffDecimalValue(percentTotal, percentTotalYesterDay) + ")"
+    + "</td></tr>");
 }
 
 // 感染数のグラフデータを表示
@@ -228,7 +223,7 @@ function displayChartDataShisha(chartDataShisha, dataKansenShisha) {
   var chart = new Chart(ctx, chartDataShisha);
 }
 
-// aとbの差分(a-b)を取得
+// 整数aとbの差分(a-b)を取得
 function getDiffIntValue(a, b) {
   // 前日からの死者数の増加数
   var diff = a - b;
@@ -242,6 +237,17 @@ function getDiffIntValue(a, b) {
   return diff;
 }
 
+// 小数aとbの差分(a-b)を取得
+function getDiffDecimalValue(a, b) {
+  var diff = a - b;
+  // 小数点以下の桁数1桁で設定
+  diff = round(diff);
+  if(diff > 0) {
+    diff = "+" + diff;
+  }
+  return diff;
+}
+
 // 死者数の割合(%)を取得
 function getPercent(cases, deaths) {
   var percent = 0;
@@ -250,4 +256,21 @@ function getPercent(cases, deaths) {
     percent = Math.round(deaths * 1000 / cases) / 10;
   }
   return percent;
+}
+
+// 小数点以下の桁数1桁になるように四捨五入する
+function round(value) {
+  return Math.round(value * 10) / 10;
+}
+
+// 前日の日付文字列(YYYYMMDD)を取得する
+function getYesterDayDateStr() {
+  var date = new Date();
+  // 前日を取得
+  date.setDate(date.getDate() - 1);
+
+  var year = date.getFullYear();
+  var month = (date.getMonth() + 1);
+  var day = date.getDate();
+  return year + ('0' + month).slice(-2) + ('0' + day).slice(-2);
 }
