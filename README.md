@@ -5,8 +5,9 @@
 
 # DEMO
 
-![](https://user-images.githubusercontent.com/62694113/78469139-4e705200-7759-11ea-836c-8329abc0a7c1.png)
- 
+![](https://user-images.githubusercontent.com/62694113/79062726-aff36c00-7cd7-11ea-831b-139e28eb1d2c.png)
+![](https://user-images.githubusercontent.com/62694113/79062728-b1bd2f80-7cd7-11ea-9888-eb09a207695a.png)
+
 # Features
  
 低速の環境でもストレスなく表示できるようにシンプルな内容にしました。
