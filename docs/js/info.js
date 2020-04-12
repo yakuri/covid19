@@ -149,7 +149,7 @@ function displayList(dataKansenShisha, baseDateStr) {
   var totalDeathsYesterDay = 0;
 
   // ヘッダを出力
-  $("#output").append("<tr><th>都道府県名</th><th>感染数(前日比(※))</th><th>死者数(前日比(※))</th><th>死者数の割合(前日比(※))</th></tr>");
+  $("#output").append("<tr><th>都道府県名</th><th>感染数(前日比<span class=notice2>(※)</span>)</th><th>死者数(前日比<span class=notice2>(※)</span>)</th><th>死者数の割合(前日比<span class=notice2>(※)</span>)</th></tr>");
 
   // 感染数（死者数含む）の一覧表示
   for(var i in dataKansenShisha){
