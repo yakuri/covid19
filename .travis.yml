@@ -9,7 +9,7 @@ jobs:
         - git clone --depth=5 --branch=master git@github.com:yakuri/covid19.git
         - cd covid19
         - DATE=`env TZ=JST-9 date +"%Y%m%d"`
-        - DATETIME=`env TZ=JST-9 date +"%Y-%m-%dT%H:%M:%S+0900"`
+        - DATETIME=`env TZ=JST-9 date +"%Y-%m-%dT%H:%M:%S+09:00"`
         - COLON=":"
         - echo "{\"date\" ${COLON} \"${DATETIME}\", \"data\" ${COLON}" > docs/data/prefectures_$DATE.json
         - curl https://covid19-japan-web-api.now.sh/api/v1/prefectures >> docs/data/prefectures_$DATE.json
