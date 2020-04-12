@@ -84,6 +84,8 @@ $(function(){
 
   // 前日のデータを取得
   var yesterDayStr = getYesterDayDateStr();
+  // 前日のデータがいつ時点のデータを元にしているか
+  var baseDateStr;
   $.ajax({
     url:"https://yakuri.github.io/covid19/data/prefectures_" + yesterDayStr + ".json",
     type:"GET",
@@ -91,6 +93,7 @@ $(function(){
     timespan:1000,
     async: false
     }).done(function(data,textStatus,jqXHR) {
+      baseDateStr = getBaseDateStr(new Date(Date.parse(data.date)));
       for(var i in data.data){
         // 感染数(前日)
         dataKansenShisha[i].casesYesterDay = data.data[i].cases;
@@ -118,7 +121,7 @@ $(function(){
   });
 
   // 感染数（死者数含む）の一覧表示
-  displayList(dataKansenShisha);
+  displayList(dataKansenShisha, baseDateStr);
 
   // 感染数のグラフデータを表示
   displayChartDataKansen(chartDataKansen, dataKansenShisha);
@@ -135,7 +138,7 @@ $(function(){
 });
 
 // 一覧を表示
-function displayList(dataKansenShisha) {
+function displayList(dataKansenShisha, baseDateStr) {
   // 感染数(現在)の合計
   var totalCases = 0;
   // 感染数(前日)の合計
@@ -146,7 +149,7 @@ function displayList(dataKansenShisha) {
   var totalDeathsYesterDay = 0;
 
   // ヘッダを出力
-  $("#output").append("<tr><th>都道府県名</th><th>感染数(前日比)</th><th>死者数(前日比)</th><th>死者数の割合(前日比)</th></tr>");
+  $("#output").append("<tr><th>都道府県名</th><th>感染数(前日比(※))</th><th>死者数(前日比(※))</th><th>死者数の割合(前日比(※))</th></tr>");
 
   // 感染数（死者数含む）の一覧表示
   for(var i in dataKansenShisha){
@@ -192,6 +195,8 @@ function displayList(dataKansenShisha) {
     + "%"
     + "(" + getDiffDecimalValue(percentTotal, percentTotalYesterDay) + ")"
     + "</td></tr>");
+
+  $("#baseDate").append(baseDateStr);
 }
 
 // 感染数のグラフデータを表示
@@ -265,7 +270,8 @@ function round(value) {
 
 // 前日の日付文字列(YYYYMMDD)を取得する
 function getYesterDayDateStr() {
-  var date = new Date();
+  // 日本時間を取得
+  var date = new Date(Date.now() + ((new Date().getTimezoneOffset() + (9 * 60)) * 60 * 1000));
   // 前日を取得
   date.setDate(date.getDate() - 1);
 
@@ -273,4 +279,14 @@ function getYesterDayDateStr() {
   var month = (date.getMonth() + 1);
   var day = date.getDate();
   return year + ('0' + month).slice(-2) + ('0' + day).slice(-2);
+}
+
+// 日時の文字列(YYYYMMDDHHMM)を取得する
+function getBaseDateStr(date) {
+    var year = date.getFullYear();
+    var month = (date.getMonth() + 1);
+    var day = date.getDate();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    return year + '年' + month + '月' + day + '日' + hours + '時' + minutes + '分';
 }
