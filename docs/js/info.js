@@ -234,10 +234,6 @@ function getDiffIntValue(a, b) {
   var diff = a - b;
   if(diff > 0) {
     diff = "+" + diff;
-  } else if(diff == 0) {
-    // 何もしない
-  } else {
-    diff = "-" + diff;
   }
   return diff;
 }
