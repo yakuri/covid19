@@ -57,19 +57,16 @@ table tr:last-child td:last-child {
   border-radius: 0 0 5px 0;
 }
 
-@media screen and (min-width: 200px) {
-  .chart_container {
-    width: 500px;
-    //margin: auto;
-  }
-}
-
 .notice {
   font-size: 15px;
 }
 
 .notice2 {
   font-size: 12px;
+}
+
+.chart-container {
+  position: relative; width:95vw; height:60vh;
 }
 
 }

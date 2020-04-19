@@ -14,6 +14,7 @@ $(function(){
     ]
   };
   chartDataKansen.options = {
+    maintainAspectRatio: false,
     title: {
       display: true,
       text: '都道府県別 感染数（上位10都道府県）'
@@ -44,6 +45,7 @@ $(function(){
     ]
   };
   chartDataShisha.options = {
+    maintainAspectRatio: false,
     title: {
       display: true,
       text: '都道府県別 死者数（上位10都道府県）'

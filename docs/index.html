@@ -17,8 +17,12 @@
   <p><a href="https://github.com/ryo-ma/covid19-japan-web-api">COVID-19 Japan Web API</a> から取得した感染数・死者数のデータを表示しています。</p>
   <p>有志の方が収集されたデータを元にしています。正確な情報は厚生労働省などの公的機関の報道を参考してください。</p>
   <p>作者：<a href="https://github.com/yakuri/covid19">yakuri</a></p>
-  <canvas id="chartKansen"></canvas>
-  <canvas id="chartShisha"></canvas>
+  <div class="chart-container">
+    <canvas id="chartKansen"></canvas>
+  </div>
+  <div class="chart-container">
+    <canvas id="chartShisha"></canvas>
+  </div>
   <br/>
   <table id="output"></table>
   <div class="notice">※前日の感染数・死亡数は<span id="baseDate"></span>時点のデータを元にしています。</div>
