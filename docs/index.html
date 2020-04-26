@@ -13,17 +13,24 @@
 <script src="./js/population.js"></script>
 </head>
 <body>
-  <h1>新型コロナウィルスの都道府県別の感染数・死者数</h1>
+  <div>
+    <img src="./img/covid19.jpg" style="max-width:100%;"/>
+  </div>
   <p><a href="https://github.com/ryo-ma/covid19-japan-web-api">COVID-19 Japan Web API</a> から取得した感染数・死者数のデータを表示しています。</p>
   <p>有志の方が収集されたデータを元にしています。正確な情報は厚生労働省などの公的機関の報道を参考してください。</p>
   <p>作者：<a href="https://github.com/yakuri/covid19">yakuri</a></p>
-  <div class="chart-container">
-    <canvas id="chartKansen"></canvas>
-  </div>
-  <div class="chart-container">
-    <canvas id="chartShisha"></canvas>
-  </div>
-  <br/>
+  <h2>都道府県別の感染数・死者数一覧</h2>
   <table id="output"></table>
   <div class="notice">※前日の感染数・死亡数は<span id="baseDate"></span>時点のデータを元にしています。</div>
+  <h2>各種グラフ</h2>
+  <form name="form">
+    <select name="chart" onchange="displayChart()">
+      <option value="">表示するグラフを選択してください</option>
+      <option value="chartKansenTop10">都道府県別 感染数（TOP10）</option>
+      <option value="chartShishaTop10">都道府県別 死者数（TOP10）</option>
+    </select>
+  </div>
+  <div class="chart-container">
+    <canvas id="chart"></canvas>
+  </div>
 </body>

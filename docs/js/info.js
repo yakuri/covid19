@@ -1,67 +1,19 @@
+// グラフデータ
+var chartData;
+// グラフ
+var chart;
+// 前日のデータがいつ時点のデータを元にしているか
+var baseDateStr;
+
 $(function(){
+  // 感染数・死者数のデータ
+  var dataKansenShisha = getDataKansenShisha();
 
-  // 感染数のグラフデータの初期化
-  var chartDataKansen = {};
-  chartDataKansen.type = 'bar';
-  chartDataKansen.data = {
-    labels: [{}],
-    datasets: [
-      {
-        label: '感染数',
-        data: [{}],
-        backgroundColor: "rgba(219,39,91,0.5)",
-      },
-    ]
-  };
-  chartDataKansen.options = {
-    maintainAspectRatio: false,
-    title: {
-      display: true,
-      text: '都道府県別 感染数（上位10都道府県）'
-    },
-    scales: {
-      xAxes: [{
-          ticks: {
-          }
-      },],
-      yAxes: [{
-          ticks: {
-          }
-      },]
-    },
-  };
+  // 感染数（死者数含む）の一覧表示
+  displayList(dataKansenShisha);
+});
 
-  // 死者数のグラフデータの初期化
-  var chartDataShisha = {};
-  chartDataShisha.type = 'bar';
-  chartDataShisha.data = {
-    labels: [{}],
-    datasets: [
-      {
-        label: '死者数',
-        data: [{}],
-        backgroundColor: "rgba(100,39,91,0.5)",
-      },
-    ]
-  };
-  chartDataShisha.options = {
-    maintainAspectRatio: false,
-    title: {
-      display: true,
-      text: '都道府県別 死者数（上位10都道府県）'
-    },
-    scales: {
-      xAxes: [{
-          ticks: {
-          }
-      },],
-      yAxes: [{
-          ticks: {
-          }
-      },]
-    },
-  };
-
+function getDataKansenShisha() {
   // 感染数・死者数のデータ
   var dataKansenShisha;
 
@@ -79,7 +31,6 @@ $(function(){
         // 10万人あたりの死者数(現在)
         dataKansenShisha[i].deathsPer100000 = dataKansenShisha[i].deaths * 100 / populationList[i];
       }
-      // console.log(JSON.stringify(data));
     }).fail(function(jqXHR, textStatus, errorThrown ) {
       console.log(jqXHR.status);
       console.log(textStatus);
@@ -90,8 +41,6 @@ $(function(){
 
   // 前日のデータを取得
   var yesterDayStr = getYesterDayDateStr();
-  // 前日のデータがいつ時点のデータを元にしているか
-  var baseDateStr;
   $.ajax({
     url:"https://yakuri.github.io/covid19/data/prefectures_" + yesterDayStr + ".json",
     type:"GET",
@@ -117,32 +66,17 @@ $(function(){
       console.log("complete");
   });
 
+  return dataKansenShisha;
+}
+
+// 一覧を表示
+function displayList(dataKansenShisha) {
   // 現在の感染数でソート
   dataKansenShisha.sort(function(a,b){
     if(a.cases > b.cases) return -1;
     if(a.cases < b.cases) return 1;
     return 0;
   });
-
-  // 感染数（死者数含む）の一覧表示
-  displayList(dataKansenShisha, baseDateStr);
-
-  // 感染数のグラフデータを表示
-  displayChartDataKansen(chartDataKansen, dataKansenShisha);
-
-  // 現在の死者数でソート
-  dataKansenShisha.sort(function(a,b){
-    if(a.deaths > b.deaths) return -1;
-    if(a.deaths < b.deaths) return 1;
-    return 0;
-  });
-
-  // 死者数のグラフデータを表示
-  displayChartDataShisha(chartDataShisha, dataKansenShisha);
-});
-
-// 一覧を表示
-function displayList(dataKansenShisha, baseDateStr) {
   // 感染数(現在)の合計
   var totalCases = 0;
   // 感染数(前日)の合計
@@ -156,7 +90,7 @@ function displayList(dataKansenShisha, baseDateStr) {
 
   // ヘッダを出力
   $("#output").append("<tr>"
-    + "<th>都道府県名</th>"
+    + "<th>都道府県</th>"
     + "<th>感染数(前日比<span class=notice2>(※)</span>)</th>"
     + "<th>死者数(前日比<span class=notice2>(※)</span>)</th>"
     + "<th>死者数の割合(前日比<span class=notice2>(※)</span>)</th>"
@@ -228,33 +162,135 @@ function displayList(dataKansenShisha, baseDateStr) {
   $("#baseDate").append(baseDateStr);
 }
 
+function displayChart() {
+  obj = document.form.chart;
+
+  index = obj.selectedIndex;
+  if (index == 0) {
+
+  } else {
+    // 感染数・死者数のデータを取得
+    var dataKansenShisha = getDataKansenShisha();
+    switch (obj.options[index].value) {
+      case 'chartKansenTop10':
+        // 感染数のグラフデータを表示
+        displayChartDataKansen(dataKansenShisha);
+        break;
+      case 'chartShishaTop10':
+        // 死者数のグラフデータを表示
+        displayChartDataShisha(dataKansenShisha);
+        break;
+      default:
+    }
+  }
+}
+
+
 // 感染数のグラフデータを表示
-function displayChartDataKansen(chartDataKansen, dataKansenShisha) {
+function displayChartDataKansen(dataKansenShisha) {
+  // 感染数のグラフデータの初期化
+  chartData = {};
+  chartData.type = 'bar';
+  chartData.data = {
+    labels: [{}],
+    datasets: [
+      {
+        label: '感染数',
+        data: [{}],
+        backgroundColor: "rgba(219,39,91,0.5)",
+      },
+    ]
+  };
+  chartData.options = {
+    maintainAspectRatio: false,
+    title: {
+      display: true,
+      text: '都道府県別 感染数（TOP10）'
+    },
+    scales: {
+      xAxes: [{
+          ticks: {
+          }
+      },],
+      yAxes: [{
+          ticks: {
+          }
+      },]
+    },
+  };
+  // 現在の感染数でソート
+  dataKansenShisha.sort(function(a,b){
+    if(a.cases > b.cases) return -1;
+    if(a.cases < b.cases) return 1;
+    return 0;
+  });
   // 感染数のグラフデータを設定
   for(var i in dataKansenShisha){
     if (i < 10) {
-      chartDataKansen.data.labels[i] = dataKansenShisha[i].name_ja;
-      chartDataKansen.data.datasets[0].data[i] = dataKansenShisha[i].cases;
+      chartData.data.labels[i] = dataKansenShisha[i].name_ja;
+      chartData.data.datasets[0].data[i] = dataKansenShisha[i].cases;
     }
   }
   // 感染数のグラフを表示
-  var ctx = document.getElementById('chartKansen');
-  var chart = new Chart(ctx, chartDataKansen);
+  var ctx = document.getElementById('chart');
+  if(chart) {
+    chart.destroy();
+  }
+  chart = new Chart(ctx, chartData);
 }
 
 // 死者数のグラフデータを表示
-function displayChartDataShisha(chartDataShisha, dataKansenShisha) {
+function displayChartDataShisha(dataKansenShisha) {
+  // 死者数のグラフデータの初期化
+  chartData = {};
+  chartData.type = 'bar';
+  chartData.data = {
+    labels: [{}],
+    datasets: [
+      {
+        label: '死者数',
+        data: [{}],
+        backgroundColor: "rgba(100,39,91,0.5)",
+      },
+    ]
+  };
+  chartData.options = {
+    maintainAspectRatio: false,
+    title: {
+      display: true,
+      text: '都道府県別 死者数（TOP10）'
+    },
+    scales: {
+      xAxes: [{
+          ticks: {
+          }
+      },],
+      yAxes: [{
+          ticks: {
+          }
+      },]
+    },
+  };
+  // 現在の死者数でソート
+  dataKansenShisha.sort(function(a,b){
+    if(a.deaths > b.deaths) return -1;
+    if(a.deaths < b.deaths) return 1;
+    return 0;
+  });
   // 取得したデータを死者数のグラフデータに設定
   for(var i in dataKansenShisha){
     // グラフ表示用
     if (i < 10) {
-        chartDataShisha.data.labels[i] = dataKansenShisha[i].name_ja;
-        chartDataShisha.data.datasets[0].data[i] = dataKansenShisha[i].deaths;
+        chartData.data.labels[i] = dataKansenShisha[i].name_ja;
+        chartData.data.datasets[0].data[i] = dataKansenShisha[i].deaths;
     }
   }
   // 死者数のグラフを表示
-  var ctx = document.getElementById('chartShisha');
-  var chart = new Chart(ctx, chartDataShisha);
+  var ctx = document.getElementById('chart');
+  if(chart) {
+    chart.destroy();
+  }
+  chart = new Chart(ctx, chartData);
 }
 
 // 整数aとbの差分(a-b)を取得
