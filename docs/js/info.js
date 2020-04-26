@@ -167,7 +167,9 @@ function displayChart() {
 
   index = obj.selectedIndex;
   if (index == 0) {
-
+    if(chart) {
+      chart.destroy();
+    }
   } else {
     // 感染数・死者数のデータを取得
     var dataKansenShisha = getDataKansenShisha();
