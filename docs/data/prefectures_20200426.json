@@ -1,0 +1,708 @@
+{"date" : "2020-04-26T22:46:44+09:00", "data" :
+[
+  {
+    "id": 1,
+    "name_ja": "北海道",
+    "name_en": "Hokkaido",
+    "lat": 43.46722222,
+    "lng": 142.8277778,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 610,
+    "deaths": 25,
+    "pcr": 5362
+  },
+  {
+    "id": 2,
+    "name_ja": "青森",
+    "name_en": "Aomori",
+    "lat": 40.78027778,
+    "lng": 140.83194440000003,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 22,
+    "deaths": 0,
+    "pcr": 568
+  },
+  {
+    "id": 3,
+    "name_ja": "岩手",
+    "name_en": "Iwate",
+    "lat": 39.59138889,
+    "lng": 141.3625,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 0,
+    "deaths": 0,
+    "pcr": 288
+  },
+  {
+    "id": 4,
+    "name_ja": "宮城",
+    "name_en": "Miyagi",
+    "lat": 38.44555556,
+    "lng": 140.9280556,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020423
+    },
+    "cases": 85,
+    "deaths": 0,
+    "pcr": 1568
+  },
+  {
+    "id": 5,
+    "name_ja": "秋田",
+    "name_en": "Akita",
+    "lat": 39.7475,
+    "lng": 140.4086111,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 15,
+    "deaths": 0,
+    "pcr": 786
+  },
+  {
+    "id": 6,
+    "name_ja": "山形",
+    "name_en": "Yamagata",
+    "lat": 38.44638889,
+    "lng": 140.1027778,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 66,
+    "deaths": 0,
+    "pcr": 1997
+  },
+  {
+    "id": 7,
+    "name_ja": "福島",
+    "name_en": "Fukushima",
+    "lat": 37.37888889,
+    "lng": 140.22527780000001,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020423
+    },
+    "cases": 69,
+    "deaths": 0,
+    "pcr": 1420
+  },
+  {
+    "id": 8,
+    "name_ja": "茨城",
+    "name_en": "Ibaraki",
+    "lat": 36.30638889,
+    "lng": 140.3186111,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020422
+    },
+    "cases": 161,
+    "deaths": 6,
+    "pcr": 3060
+  },
+  {
+    "id": 9,
+    "name_ja": "栃木",
+    "name_en": "Tochigi",
+    "lat": 36.68916667,
+    "lng": 139.81916669999998,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 54,
+    "deaths": 0,
+    "pcr": 1724
+  },
+  {
+    "id": 10,
+    "name_ja": "群馬",
+    "name_en": "Gunma",
+    "lat": 36.50388889,
+    "lng": 138.9852778,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020423
+    },
+    "cases": 141,
+    "deaths": 14,
+    "pcr": 2391
+  },
+  {
+    "id": 11,
+    "name_ja": "埼玉",
+    "name_en": "Saitama",
+    "lat": 35.99666667,
+    "lng": 139.34777780000002,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 818,
+    "deaths": 25,
+    "pcr": 6110
+  },
+  {
+    "id": 12,
+    "name_ja": "千葉",
+    "name_en": "Chiba",
+    "lat": 35.51277778,
+    "lng": 140.2038889,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 807,
+    "deaths": 26,
+    "pcr": 6108
+  },
+  {
+    "id": 13,
+    "name_ja": "東京",
+    "name_en": "Tokyo",
+    "lat": 35.702313700000005,
+    "lng": 139.5803228,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020422
+    },
+    "cases": 3908,
+    "deaths": 100,
+    "pcr": 21206
+  },
+  {
+    "id": 14,
+    "name_ja": "神奈川",
+    "name_en": "Kanagawa",
+    "lat": 35.41416667,
+    "lng": 139.34027780000002,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 954,
+    "deaths": 26,
+    "pcr": 6776
+  },
+  {
+    "id": 15,
+    "name_ja": "新潟",
+    "name_en": "Niigata",
+    "lat": 37.51888889,
+    "lng": 138.91722219999997,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 70,
+    "deaths": 0,
+    "pcr": 2491
+  },
+  {
+    "id": 16,
+    "name_ja": "富山",
+    "name_en": "Toyama",
+    "lat": 36.63611111,
+    "lng": 137.2680556,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020423
+    },
+    "cases": 178,
+    "deaths": 5,
+    "pcr": 1859
+  },
+  {
+    "id": 17,
+    "name_ja": "石川",
+    "name_en": "Ishikawa",
+    "lat": 36.76583333,
+    "lng": 136.7713889,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 229,
+    "deaths": 5,
+    "pcr": 1424
+  },
+  {
+    "id": 18,
+    "name_ja": "福井",
+    "name_en": "Fukui",
+    "lat": 35.84666667,
+    "lng": 136.22722219999997,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 121,
+    "deaths": 6,
+    "pcr": 1313
+  },
+  {
+    "id": 19,
+    "name_ja": "山梨",
+    "name_en": "Yamanashi",
+    "lat": 35.61222222,
+    "lng": 138.6116667,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020423
+    },
+    "cases": 52,
+    "deaths": 0,
+    "pcr": 1922
+  },
+  {
+    "id": 20,
+    "name_ja": "長野",
+    "name_en": "Nagano",
+    "lat": 36.13,
+    "lng": 138.04388889999998,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 66,
+    "deaths": 0,
+    "pcr": 1608
+  },
+  {
+    "id": 21,
+    "name_ja": "岐阜",
+    "name_en": "Gifu",
+    "lat": 35.7775,
+    "lng": 137.055,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 149,
+    "deaths": 6,
+    "pcr": 2721
+  },
+  {
+    "id": 22,
+    "name_ja": "静岡",
+    "name_en": "Shizuoka",
+    "lat": 35.01694444,
+    "lng": 138.33,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 63,
+    "deaths": 0,
+    "pcr": 2440
+  },
+  {
+    "id": 23,
+    "name_ja": "愛知",
+    "name_en": "Aichi",
+    "lat": 35.03444444,
+    "lng": 137.215,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 473,
+    "deaths": 31,
+    "pcr": 6488
+  },
+  {
+    "id": 24,
+    "name_ja": "三重",
+    "name_en": "Mie",
+    "lat": 34.51361111,
+    "lng": 136.3813889,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 44,
+    "deaths": 1,
+    "pcr": 1724
+  },
+  {
+    "id": 25,
+    "name_ja": "滋賀",
+    "name_en": "Shiga",
+    "lat": 35.21527778,
+    "lng": 136.13805559999997,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 94,
+    "deaths": 1,
+    "pcr": 1141
+  },
+  {
+    "id": 26,
+    "name_ja": "京都",
+    "name_en": "Kyoto",
+    "lat": 35.25194444,
+    "lng": 135.4458333,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020423
+    },
+    "cases": 294,
+    "deaths": 8,
+    "pcr": 3615
+  },
+  {
+    "id": 27,
+    "name_ja": "大阪",
+    "name_en": "Osaka",
+    "lat": 34.62277778,
+    "lng": 135.5111111,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 1491,
+    "deaths": 30,
+    "pcr": 9413
+  },
+  {
+    "id": 28,
+    "name_ja": "兵庫",
+    "name_en": "Hyogo",
+    "lat": 35.03694444,
+    "lng": 134.8286111,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 629,
+    "deaths": 24,
+    "pcr": 6641
+  },
+  {
+    "id": 29,
+    "name_ja": "奈良",
+    "name_en": "Nara",
+    "lat": 34.31555556,
+    "lng": 135.8713889,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 73,
+    "deaths": 1,
+    "pcr": 1173
+  },
+  {
+    "id": 30,
+    "name_ja": "和歌山",
+    "name_en": "Wakayama",
+    "lat": 33.90944444,
+    "lng": 135.5133333,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 58,
+    "deaths": 1,
+    "pcr": 2681
+  },
+  {
+    "id": 31,
+    "name_ja": "鳥取",
+    "name_en": "Tottori",
+    "lat": 35.36055556,
+    "lng": 133.8516667,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 3,
+    "deaths": 0,
+    "pcr": 943
+  },
+  {
+    "id": 32,
+    "name_ja": "島根",
+    "name_en": "Shimane",
+    "lat": 35.07305556,
+    "lng": 132.55944440000002,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 22,
+    "deaths": 0,
+    "pcr": 763
+  },
+  {
+    "id": 33,
+    "name_ja": "岡山",
+    "name_en": "Okayama",
+    "lat": 34.90083333,
+    "lng": 133.8152778,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 22,
+    "deaths": 0,
+    "pcr": 989
+  },
+  {
+    "id": 34,
+    "name_ja": "広島",
+    "name_en": "Hiroshima",
+    "lat": 34.60361111,
+    "lng": 132.7875,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020423
+    },
+    "cases": 148,
+    "deaths": 2,
+    "pcr": 4245
+  },
+  {
+    "id": 35,
+    "name_ja": "山口",
+    "name_en": "Yamaguchi",
+    "lat": 34.19861111,
+    "lng": 131.575,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020423
+    },
+    "cases": 31,
+    "deaths": 0,
+    "pcr": 1179
+  },
+  {
+    "id": 36,
+    "name_ja": "徳島",
+    "name_en": "Tokushima",
+    "lat": 33.91805556,
+    "lng": 134.2430556,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020423
+    },
+    "cases": 5,
+    "deaths": 0,
+    "pcr": 395
+  },
+  {
+    "id": 37,
+    "name_ja": "香川",
+    "name_en": "Kagawa",
+    "lat": 34.24305556,
+    "lng": 133.99666670000002,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020423
+    },
+    "cases": 28,
+    "deaths": 0,
+    "pcr": 1427
+  },
+  {
+    "id": 38,
+    "name_ja": "愛媛",
+    "name_en": "Ehime",
+    "lat": 33.62194444,
+    "lng": 132.8558333,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020423
+    },
+    "cases": 47,
+    "deaths": 3,
+    "pcr": 977
+  },
+  {
+    "id": 39,
+    "name_ja": "高知",
+    "name_en": "Kōchi",
+    "lat": 33.42111111,
+    "lng": 133.36666670000002,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 73,
+    "deaths": 3,
+    "pcr": 1318
+  },
+  {
+    "id": 40,
+    "name_ja": "福岡",
+    "name_en": "Fukuoka",
+    "lat": 33.5225,
+    "lng": 130.66805559999997,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 611,
+    "deaths": 16,
+    "pcr": 8189
+  },
+  {
+    "id": 41,
+    "name_ja": "佐賀",
+    "name_en": "Saga",
+    "lat": 33.28527778,
+    "lng": 130.11694440000002,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 37,
+    "deaths": 0,
+    "pcr": 736
+  },
+  {
+    "id": 42,
+    "name_ja": "長崎",
+    "name_en": "Nagasaki",
+    "lat": 33.2275,
+    "lng": 129.61416670000003,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 17,
+    "deaths": 1,
+    "pcr": 1786
+  },
+  {
+    "id": 43,
+    "name_ja": "熊本",
+    "name_en": "Kumamoto",
+    "lat": 32.615,
+    "lng": 130.7563889,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 46,
+    "deaths": 1,
+    "pcr": 2732
+  },
+  {
+    "id": 44,
+    "name_ja": "大分",
+    "name_en": "Oita",
+    "lat": 33.19916667,
+    "lng": 131.43416670000002,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 60,
+    "deaths": 1,
+    "pcr": 2960
+  },
+  {
+    "id": 45,
+    "name_ja": "宮崎",
+    "name_en": "Miyazaki",
+    "lat": 32.19083333,
+    "lng": 131.3005556,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020423
+    },
+    "cases": 17,
+    "deaths": 0,
+    "pcr": 1010
+  },
+  {
+    "id": 46,
+    "name_ja": "鹿児島",
+    "name_en": "Kagoshima",
+    "lat": 31.01277778,
+    "lng": 130.4241667,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020423
+    },
+    "cases": 10,
+    "deaths": 0,
+    "pcr": 1109
+  },
+  {
+    "id": 47,
+    "name_ja": "沖縄",
+    "name_en": "Okinawa",
+    "lat": 25.77111111,
+    "lng": 126.64,
+    "last_updated": {
+      "cases_date": 20200426,
+      "deaths_date": 20200426,
+      "pcr_date": 2020424
+    },
+    "cases": 137,
+    "deaths": 4,
+    "pcr": 1792
+  }
+]}
