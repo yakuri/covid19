@@ -26,8 +26,11 @@
   <form name="form">
     <select name="chart" onchange="displayChart()">
       <option value="">表示するグラフを選択してください</option>
-      <option value="chartKansenTop10">都道府県別 感染数（TOP10）</option>
-      <option value="chartShishaTop10">都道府県別 死者数（TOP10）</option>
+      <option value="chartCasesTop10">都道府県別 感染数（TOP10）</option>
+      <option value="chartDeathsTop10">都道府県別 死者数（TOP10）</option>
+      <option value="chartCasesHistory">感染数（推移）</option>
+      <option value="chartDeathsHistory">死者数（推移）</option>
+      <option value="chartPercentHistory">感染数に占める死者数の割合（推移）</option>
     </select>
   </div>
   <div class="chart-container">
