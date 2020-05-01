@@ -294,7 +294,7 @@ function displayChartCases(prefectures) {
       {
         label: '感染数',
         data: [{}],
-        backgroundColor: "rgba(219,39,91,0.5)",
+        backgroundColor: "rgba(0,0,100,0.5)",
       },
     ]
   };
@@ -349,7 +349,7 @@ function displayChartDeaths(prefectures) {
       {
         label: '死者数',
         data: [{}],
-        backgroundColor: "rgba(100,39,91,0.5)",
+        backgroundColor: "rgba(0,0,100,0.5)",
       },
     ]
   };
@@ -439,7 +439,7 @@ function displayChartCasesHistory(totalHistory) {
         scaleLabel: {
           display: true,
           labelString: '感染数(累計)'
-        }
+        },
       },{
           id: "y-axis-2",
           type: "linear",
@@ -484,15 +484,15 @@ function displayChartDeathsHistory(totalHistory) {
         type: 'line',
         label: '死者数(累計)(※)',
         data: [{}],
-        backgroundColor: "rgba(0,0,100,0.5)",
+        backgroundColor: "rgba(0,100,0,0.5)",
         fill: false,
         yAxisID: "y-axis-1",
       },
       {
         type: 'bar',
-        label: '死者数(※)',
+        label: '死者数(日毎)(※)',
         data: [{}],
-        backgroundColor: "rgba(0,0,30,0.5)",
+        backgroundColor: "rgba(0,0,100,0.5)",
         yAxisID: "y-axis-2",
       },
     ]
@@ -513,12 +513,20 @@ function displayChartDeathsHistory(totalHistory) {
           type: "linear",
           position: "left",
           ticks: {
-          }
+          },
+          scaleLabel: {
+            display: true,
+            labelString: '死者数(累計)'
+          },
       },{
           id: "y-axis-2",
           type: "linear",
           position: "right",
           ticks: {
+          },
+          scaleLabel: {
+            display: true,
+            labelString: '死者数(日毎)'
           },
           gridLines: {
             drawOnChartArea: false,
@@ -553,7 +561,7 @@ function displayChartPercentHistory(totalHistory) {
       {
         label: '感染数に占める死者数の割合(%)(※)',
         data: [{}],
-        backgroundColor: "rgba(19,39,91,0.5)",
+        backgroundColor: "rgba(0,100,0,0.5)",
         fill: false,
       },
     ]
