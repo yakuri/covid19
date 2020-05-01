@@ -7,7 +7,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
   <link rel="stylesheet" media="(min-width: 640px)" href="./css/info.css">
   <link rel="stylesheet" media="(max-width: 640px)" href="./css/info_sp.css">
-<title>新型コロナウィルスの都道府県別の感染数・死者数</title>
+<title>新型コロナウィルスの感染数・死者数</title>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <script src="./js/info.js?date=20200501"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <div>
-    <img src="./img/covid19.jpg" style="max-width:100%;"/>
+    <img src="./img/covid19.jpg?date=20200501" style="max-width:100%;"/>
   </div>
   <p><a href="https://github.com/ryo-ma/covid19-japan-web-api">COVID-19 Japan Web API</a> から取得した感染数・死者数のデータを表示しています。</p>
   <p>有志の方が収集されたデータを元にしています。正確な情報は厚生労働省などの公的機関の報道を参考してください。</p>
@@ -37,5 +37,5 @@
   <div class="chart-container">
     <canvas id="chart"></canvas>
   </div>
-  <div class="notice">※チャーター便、クルーズ船、検疫職員の患者含む</div>
+  <div id="chartNotice" class="notice" style="display:none;">※チャーター便、クルーズ船、検疫職員の患者含む</div>
 </body>

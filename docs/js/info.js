@@ -236,6 +236,8 @@ function displayList(prefectures) {
 function displayChart() {
   obj = document.form.chart;
   index = obj.selectedIndex;
+  const chartNotice = document.getElementById("chartNotice");
+  chartNotice.style.display ="none";
   if (index == 0) {
     // 「表示するグラフを選択してください」を選択した場合
     if(chart) {
@@ -260,16 +262,19 @@ function displayChart() {
         // 感染数の推移のグラフを表示
         data = getTotalHistory();
         displayChartCasesHistory(data);
+        chartNotice.style.display ="block";
         break;
       case 'chartDeathsHistory':
         // 死者数の推移のグラフを表示
         data = getTotalHistory();
         displayChartDeathsHistory(data);
+        chartNotice.style.display ="block";
         break;
       case 'chartPercentHistory':
         // 感染数に占める死者数の割合の推移のグラフを表示
         data = getTotalHistory();
         displayChartPercentHistory(data);
+        chartNotice.style.display ="block";
         break;
       default:
     }
@@ -306,7 +311,7 @@ function displayChartCases(prefectures) {
       },],
       yAxes: [{
           ticks: {
-          }
+          },
       },]
     },
   };
@@ -361,7 +366,7 @@ function displayChartDeaths(prefectures) {
       },],
       yAxes: [{
           ticks: {
-          }
+          },
       },]
     },
   };
@@ -407,9 +412,9 @@ function displayChartCasesHistory(totalHistory) {
       },
       {
         type: 'bar',
-        label: '感染数(※)',
+        label: '感染数(日別)(※)',
         data: [{}],
-        backgroundColor: "rgba(0,30,0,0.5)",
+        backgroundColor: "rgba(0,0,100,0.5)",
         yAxisID: "y-axis-2",
       },
     ]
@@ -426,16 +431,24 @@ function displayChartCasesHistory(totalHistory) {
           }
       },],
       yAxes: [{
-          id: "y-axis-1",
-          type: "linear",
-          position: "left",
-          ticks: {
-          }
+        id: "y-axis-1",
+        type: "linear",
+        position: "left",
+        ticks: {
+        },
+        scaleLabel: {
+          display: true,
+          labelString: '感染数(累計)'
+        }
       },{
           id: "y-axis-2",
           type: "linear",
           position: "right",
           ticks: {
+          },
+          scaleLabel: {
+            display: true,
+            labelString: '感染数(日別)'
           },
           gridLines: {
             drawOnChartArea: false,
@@ -538,9 +551,10 @@ function displayChartPercentHistory(totalHistory) {
     labels: [{}],
     datasets: [
       {
-        label: '感染数に占める死者数の割合(%)',
+        label: '感染数に占める死者数の割合(%)(※)',
         data: [{}],
         backgroundColor: "rgba(19,39,91,0.5)",
+        fill: false,
       },
     ]
   };
@@ -548,7 +562,7 @@ function displayChartPercentHistory(totalHistory) {
     maintainAspectRatio: false,
     title: {
       display: false,
-      text: '感染数に占める死者数の割合（推移）'
+      text: '感染数に占める死者数の割合(推移)'
     },
     scales: {
       xAxes: [{
@@ -556,8 +570,8 @@ function displayChartPercentHistory(totalHistory) {
           }
       },],
       yAxes: [{
-          ticks: {
-          }
+        ticks: {
+        },
       },]
     },
   };
