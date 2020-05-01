@@ -27,7 +27,7 @@ jobs:
       run: |
         DATE=`env TZ=JST-9 date +"%Y%m%d"`
         DATETIME=`env TZ=JST-9 date +"%Y-%m-%dT%H:%M:%S+09:00"`
-        echo "{date : ${DATETIME}, data : " > docs/data/prefectures_$DATE.json
+        echo "{\"date\" : ${DATETIME}, \"data\" : " > docs/data/prefectures_$DATE.json
         curl "https://covid19-japan-web-api.now.sh/api/v1/prefectures" >> docs/data/prefectures_$DATE.json
         echo } >> docs/data/prefectures_$DATE.json
 
