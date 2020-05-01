@@ -6,7 +6,7 @@ name: CI
 # events but only for the master branch
 on:
   schedule:
-    - cron:  '45 7 * * *'
+    - cron:  '45 13 * * *'
     # push:
     # branches: [ master ]
 
