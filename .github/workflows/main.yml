@@ -25,3 +25,6 @@ jobs:
       run: |
         git config --global user.email "yasutakekurita@gmail.com"
         git config --global user.name "yakuri"
+        DATE=`env TZ=JST-9 date +"%Y%m%d"`
+        DATETIME=`env TZ=JST-9 date +"%Y-%m-%dT%H:%M:%S+09:00"`
+        
