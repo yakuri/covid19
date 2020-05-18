@@ -1,4 +1,4 @@
-{"date" : "2020-05-17T22:48:13+09:00", "data" : 
+{"date" : "2020-05-16T22:47:48+09:00", "data" :
 [
   {
     "id": 1,
@@ -8,12 +8,12 @@
     "lng": 142.8277778,
     "population": 5248552,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202059
     },
-    "cases": 1002,
-    "deaths": 75,
+    "cases": 995,
+    "deaths": 74,
     "pcr": 8676
   },
   {
@@ -24,8 +24,8 @@
     "lng": 140.83194440000003,
     "population": 1246138,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202058
     },
     "cases": 27,
@@ -40,8 +40,8 @@
     "lng": 141.3625,
     "population": 1226430,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202059
     },
     "cases": 0,
@@ -56,8 +56,8 @@
     "lng": 140.9280556,
     "population": 2303160,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202059
     },
     "cases": 88,
@@ -72,8 +72,8 @@
     "lng": 140.4086111,
     "population": 965968,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202057
     },
     "cases": 15,
@@ -88,8 +88,8 @@
     "lng": 140.1027778,
     "population": 1077057,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202059
     },
     "cases": 69,
@@ -104,8 +104,8 @@
     "lng": 140.22527780000001,
     "population": 1847950,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202059
     },
     "cases": 81,
@@ -120,8 +120,8 @@
     "lng": 140.3186111,
     "population": 2868041,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202056
     },
     "cases": 168,
@@ -136,8 +136,8 @@
     "lng": 139.81916669999998,
     "population": 1942312,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202059
     },
     "cases": 60,
@@ -152,8 +152,8 @@
     "lng": 138.9852778,
     "population": 1937626,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202059
     },
     "cases": 147,
@@ -168,11 +168,11 @@
     "lng": 139.34777780000002,
     "population": 7337330,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202059
     },
-    "cases": 984,
+    "cases": 980,
     "deaths": 46,
     "pcr": 11661
   },
@@ -184,8 +184,8 @@
     "lng": 140.2038889,
     "population": 6279026,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202057
     },
     "cases": 892,
@@ -200,12 +200,12 @@
     "lng": 139.5803228,
     "population": 13942856,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202057
     },
-    "cases": 5055,
-    "deaths": 237,
+    "cases": 5050,
+    "deaths": 230,
     "pcr": 31231
   },
   {
@@ -216,11 +216,11 @@
     "lng": 139.34027780000002,
     "population": 9200166,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202057
     },
-    "cases": 1265,
+    "cases": 1260,
     "deaths": 64,
     "pcr": 8614
   },
@@ -232,8 +232,8 @@
     "lng": 138.91722219999997,
     "population": 2222004,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202059
     },
     "cases": 82,
@@ -248,8 +248,8 @@
     "lng": 137.2680556,
     "population": 1042998,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202057
     },
     "cases": 225,
@@ -264,11 +264,11 @@
     "lng": 136.7713889,
     "population": 1137181,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202058
     },
-    "cases": 287,
+    "cases": 286,
     "deaths": 21,
     "pcr": 2207
   },
@@ -280,8 +280,8 @@
     "lng": 136.22722219999997,
     "population": 767742,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202059
     },
     "cases": 122,
@@ -296,8 +296,8 @@
     "lng": 138.6116667,
     "population": 812056,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202057
     },
     "cases": 57,
@@ -312,8 +312,8 @@
     "lng": 138.04388889999998,
     "population": 2049023,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202057
     },
     "cases": 76,
@@ -328,8 +328,8 @@
     "lng": 137.055,
     "population": 1988931,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202059
     },
     "cases": 150,
@@ -344,8 +344,8 @@
     "lng": 138.33,
     "population": 3639226,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202059
     },
     "cases": 73,
@@ -360,8 +360,8 @@
     "lng": 137.215,
     "population": 7552873,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202059
     },
     "cases": 503,
@@ -376,8 +376,8 @@
     "lng": 136.3813889,
     "population": 1779770,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202059
     },
     "cases": 44,
@@ -392,8 +392,8 @@
     "lng": 136.13805559999997,
     "population": 1413959,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202059
     },
     "cases": 99,
@@ -408,8 +408,8 @@
     "lng": 135.4458333,
     "population": 2583140,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202057
     },
     "cases": 358,
@@ -424,8 +424,8 @@
     "lng": 135.5111111,
     "population": 8823453,
     "last_updated": {
-      "cases_date": 20200517,
-      "deaths_date": 20200517,
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
       "pcr_date": 202059
     },
     "cases": 1770,
@@ -437,4 +437,319 @@
     "name_ja": "兵庫",
     "name_en": "Hyogo",
     "lat": 35.03694444,
-    "lng": 134}
+    "lng": 134.8286111,
+    "population": 5463609,
+    "last_updated": {
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
+      "pcr_date": 202059
+    },
+    "cases": 699,
+    "deaths": 38,
+    "pcr": 9091
+  },
+  {
+    "id": 29,
+    "name_ja": "奈良",
+    "name_en": "Nara",
+    "lat": 34.31555556,
+    "lng": 135.8713889,
+    "population": 1331330,
+    "last_updated": {
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
+      "pcr_date": 202054
+    },
+    "cases": 86,
+    "deaths": 2,
+    "pcr": 1954
+  },
+  {
+    "id": 30,
+    "name_ja": "和歌山",
+    "name_en": "Wakayama",
+    "lat": 33.90944444,
+    "lng": 135.5133333,
+    "population": 923721,
+    "last_updated": {
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
+      "pcr_date": 202059
+    },
+    "cases": 63,
+    "deaths": 3,
+    "pcr": 3364
+  },
+  {
+    "id": 31,
+    "name_ja": "鳥取",
+    "name_en": "Tottori",
+    "lat": 35.36055556,
+    "lng": 133.8516667,
+    "population": 555663,
+    "last_updated": {
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
+      "pcr_date": 202059
+    },
+    "cases": 3,
+    "deaths": 0,
+    "pcr": 1162
+  },
+  {
+    "id": 32,
+    "name_ja": "島根",
+    "name_en": "Shimane",
+    "lat": 35.07305556,
+    "lng": 132.55944440000002,
+    "population": 673891,
+    "last_updated": {
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
+      "pcr_date": 202059
+    },
+    "cases": 24,
+    "deaths": 0,
+    "pcr": 904
+  },
+  {
+    "id": 33,
+    "name_ja": "岡山",
+    "name_en": "Okayama",
+    "lat": 34.90083333,
+    "lng": 133.8152778,
+    "population": 1891346,
+    "last_updated": {
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
+      "pcr_date": 202059
+    },
+    "cases": 24,
+    "deaths": 0,
+    "pcr": 1284
+  },
+  {
+    "id": 34,
+    "name_ja": "広島",
+    "name_en": "Hiroshima",
+    "lat": 34.60361111,
+    "lng": 132.7875,
+    "population": 2807987,
+    "last_updated": {
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
+      "pcr_date": 202057
+    },
+    "cases": 164,
+    "deaths": 2,
+    "pcr": 5746
+  },
+  {
+    "id": 35,
+    "name_ja": "山口",
+    "name_en": "Yamaguchi",
+    "lat": 34.19861111,
+    "lng": 131.575,
+    "population": 1355495,
+    "last_updated": {
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
+      "pcr_date": 202058
+    },
+    "cases": 36,
+    "deaths": 0,
+    "pcr": 1498
+  },
+  {
+    "id": 36,
+    "name_ja": "徳島",
+    "name_en": "Tokushima",
+    "lat": 33.91805556,
+    "lng": 134.2430556,
+    "population": 728633,
+    "last_updated": {
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
+      "pcr_date": 202059
+    },
+    "cases": 5,
+    "deaths": 1,
+    "pcr": 597
+  },
+  {
+    "id": 37,
+    "name_ja": "香川",
+    "name_en": "Kagawa",
+    "lat": 34.24305556,
+    "lng": 133.99666670000002,
+    "population": 956069,
+    "last_updated": {
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
+      "pcr_date": 202059
+    },
+    "cases": 28,
+    "deaths": 0,
+    "pcr": 1841
+  },
+  {
+    "id": 38,
+    "name_ja": "愛媛",
+    "name_en": "Ehime",
+    "lat": 33.62194444,
+    "lng": 132.8558333,
+    "population": 1338811,
+    "last_updated": {
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
+      "pcr_date": 202057
+    },
+    "cases": 70,
+    "deaths": 3,
+    "pcr": 1238
+  },
+  {
+    "id": 39,
+    "name_ja": "高知",
+    "name_en": "Kōchi",
+    "lat": 33.42111111,
+    "lng": 133.36666670000002,
+    "population": 697674,
+    "last_updated": {
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
+      "pcr_date": 202059
+    },
+    "cases": 74,
+    "deaths": 3,
+    "pcr": 1579
+  },
+  {
+    "id": 40,
+    "name_ja": "福岡",
+    "name_en": "Fukuoka",
+    "lat": 33.5225,
+    "lng": 130.66805559999997,
+    "population": 5110113,
+    "last_updated": {
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
+      "pcr_date": 202059
+    },
+    "cases": 655,
+    "deaths": 25,
+    "pcr": 10408
+  },
+  {
+    "id": 41,
+    "name_ja": "佐賀",
+    "name_en": "Saga",
+    "lat": 33.28527778,
+    "lng": 130.11694440000002,
+    "population": 814211,
+    "last_updated": {
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
+      "pcr_date": 202059
+    },
+    "cases": 45,
+    "deaths": 0,
+    "pcr": 1219
+  },
+  {
+    "id": 42,
+    "name_ja": "長崎",
+    "name_en": "Nagasaki",
+    "lat": 33.2275,
+    "lng": 129.61416670000003,
+    "population": 1325205,
+    "last_updated": {
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
+      "pcr_date": 202059
+    },
+    "cases": 17,
+    "deaths": 1,
+    "pcr": 2345
+  },
+  {
+    "id": 43,
+    "name_ja": "熊本",
+    "name_en": "Kumamoto",
+    "lat": 32.615,
+    "lng": 130.7563889,
+    "population": 1746740,
+    "last_updated": {
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
+      "pcr_date": 202059
+    },
+    "cases": 47,
+    "deaths": 3,
+    "pcr": 3492
+  },
+  {
+    "id": 44,
+    "name_ja": "大分",
+    "name_en": "Oita",
+    "lat": 33.19916667,
+    "lng": 131.43416670000002,
+    "population": 1134431,
+    "last_updated": {
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
+      "pcr_date": 202059
+    },
+    "cases": 60,
+    "deaths": 1,
+    "pcr": 3466
+  },
+  {
+    "id": 45,
+    "name_ja": "宮崎",
+    "name_en": "Miyazaki",
+    "lat": 32.19083333,
+    "lng": 131.3005556,
+    "population": 1072077,
+    "last_updated": {
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
+      "pcr_date": 202057
+    },
+    "cases": 17,
+    "deaths": 0,
+    "pcr": 1213
+  },
+  {
+    "id": 46,
+    "name_ja": "鹿児島",
+    "name_en": "Kagoshima",
+    "lat": 31.01277778,
+    "lng": 130.4241667,
+    "population": 1599984,
+    "last_updated": {
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
+      "pcr_date": 202059
+    },
+    "cases": 10,
+    "deaths": 0,
+    "pcr": 1477
+  },
+  {
+    "id": 47,
+    "name_ja": "沖縄",
+    "name_en": "Okinawa",
+    "lat": 25.77111111,
+    "lng": 126.64,
+    "population": 1454184,
+    "last_updated": {
+      "cases_date": 20200516,
+      "deaths_date": 20200516,
+      "pcr_date": 202059
+    },
+    "cases": 142,
+    "deaths": 6,
+    "pcr": 2456
+  }
+]}
