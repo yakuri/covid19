@@ -76,7 +76,7 @@ function getPrefectures() {
 
   // 現在のデータを取得
   $.ajax({
-    url:"https://covid19-japan-web-api.now.sh/api/v1/prefectures",
+    url:"https://covid19-japan-web-api.vercel.app/api/v1/prefectures",
     type:"GET",
     dataType:"json",
     timespan:1000,
