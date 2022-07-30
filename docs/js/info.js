@@ -41,6 +41,12 @@ function getTotalHistory() {
           // 死者数
           totalHistory[i].deathDaily = data[i].death - data[i-1].death;
         }
+        if(totalHistory[i].positiveDaily < 0) {
+          totalHistory[i].positiveDaily = 0;
+        }
+        if(totalHistory[i].deathDaily < 0) {
+          totalHistory[i].deathDaily = 0;
+        }
         // 死者数の割合
         totalHistory[i].percent = getPercent(data[i].positive, data[i].death);
       }
